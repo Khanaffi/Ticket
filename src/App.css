@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 0%;
 }
 
 .App-logo {
@@ -13,26 +14,815 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.locationdiv {
+  display: grid;
+  place-items: center;
+  padding: 10%;
+  border: 2px solid gray;
+  width: 80%;
+  max-width: 500px;
+  margin: 1% auto;
+  background-color: #ddd;
+
+}
+input {
+  margin-bottom: 30px;
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+}
+.paymentdiv {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 2%;
+  padding-bottom: 0%;
+  margin-top: 1px;
+}
+button {
+  width: 150px;
+  height: 40px;
+  background-color: rgb(129, 243, 125);
   color: white;
+  border-radius: 20px;
+  box-shadow: #282c34;
+  cursor: pointer;
+  
+}
+.paymentpg {
+  display: grid;
+  place-items: center;
+  margin: 1% auto;
+
+}
+@media (min-width: 577px) {
+
+  
+  
 }
 
-.App-link {
-  color: #61dafb;
+@media (min-width: 769px) {
+  
 }
 
-@keyframes App-logo-spin {
+@media (min-width: 993px) {}
+
+@media (min-width: 1201px) {}
+
+
+.item {
+  margin-right: 50px;
+}
+
+.payment-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  border-radius: 15px;
+  margin-top: 20px;
+  /* height: 30px;
+   */
+  padding: 5px;
+
+}
+
+.payment-options li {
+  margin-right: 20px;
+}
+
+.cards {
+  /* background-color: red; */
+  margin-top: 20px;
+}
+
+.card1 {
+  position: absolute;
+  background: rgb(255, 132, 9);
+  background: linear-gradient(90deg, rgba(255, 132, 9, 1) 42%, rgba(255, 0, 232, 1) 100%);
+  width: 200px;
+  height: 110px;
+  
+  box-shadow: 3px 5px 50px gray;
+  left: 60px;
+  border-radius: 10px;
+}
+
+.card2 {
+  position: absolute;
+  background: rgb(254, 255, 9);
+  background: linear-gradient(90deg, rgba(254, 255, 9, 1) 42%, rgba(255, 0, 232, 1) 100%);
+  width: 200px;
+  height: 110px;
+  box-shadow: 3px 5px 50px gray;
+  z-index: -1;
+  left: 30px;
+  border-radius: 10px;
+
+}
+
+.card3 {
+  position: absolute;
+  background: rgb(9, 196, 255);
+  background: linear-gradient(90deg, rgba(9, 196, 255, 1) 42%, rgba(255, 0, 232, 1) 100%);
+  width: 200px;
+  height: 110px;
+  box-shadow: 3px 5px 50px gray;
+  z-index: -2;
+  border-radius: 10px;
+
+}
+
+.card1.c1 {
+  /* clear: both; */
+  position: sticky;
+  margin-top: 20px;
+margin-left: 5px;
+  margin-bottom: 30px;}
+
+.card2.c2 {
+  position: sticky;
+  margin-top: 20px;
+  margin-left: 5px;
+
+  margin-bottom: 30px;}
+
+.card3.c3 {
+  position: sticky;
+  margin-top: 20px;
+  margin-left: 5px;
+
+  margin-bottom: 30px;
+
+}
+
+#cardtitle {
+  margin-left: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 0.5rem;
+}
+
+#chip {
+  /* position: relative; */
+  margin: 5px 20px;
+ width: 25px;
+}
+
+#chip2 {
+  margin: 5px 20px;
+ width: 25px;
+}
+
+#chip3 {
+  margin: 5px 20px;
+  width: 25px;
+}
+.card1>div{
+  display: ruby-text;
+  text-align: justify;
+  
+}
+.card2>div{
+  display: ruby-text;
+  text-align: justify;
+  
+}
+.card3>div{
+  display: ruby-text;
+  text-align: justify;
+  
+}
+.premium {
+  font-size: 0.5rem;
+  margin-left: 60px;
+  
+}
+
+.premium2 {
+  font-size: 0.5rem;
+  margin-left: 60px;
+}
+
+.premium3 {
+  font-size: 0.5rem;
+  margin-left: 60px;
+}
+
+#circle {
+margin-left: 80px;
+}
+
+#cardsection {
+  /* margin-top: 100px; */
+  transform: rotate(90deg);
+  /* padding-lef: 200px; */
+  /* position: relative; */
+  /* left: 100px; */
+  margin: auto auto ;
+  cursor: pointer;
+}
+
+.cvvcards>.an {
+  position: absolute;
+  /* transition: 3s; */
+  overflow: hidden;
+  animation: anim 1s ease-in-out 1s forwards,shrink 1.3s ease-in-out 3s forwards,hide 3s ease-in-out 2.5s forwards; 
+
+z-index: 1;
+left: 40px;
+}
+
+
+@keyframes anim {
+  from{
+  top:20px;
+     /* bottom: 10px; */
+    /* width: 200px; */ }
+  to{
+    top:500px;
+  transform: rotate(90deg);
+
+    }
+}
+@keyframes shrink {
+ from{
+/* bottom: 20px;
+ */ 
+ top:500px;
+ transform: rotate(90deg) scale(1);
+ }
+ to{
+  top:255px;
+  transform: rotate(90deg) scale(0.5, 0.5);
+  
+ }
+
+ 
+}
+@keyframes hide{
+  from{
+  top:255px;
+
+    transform: rotate(90deg) scale(0.5, 0.5);
+  }
+  to{
+  top:px;
+
+    transform: rotate(90deg) scale(0.02, 0.5);
+ 
+  }
+}
+
+
+.item>img {
+  height: 14px;
+  width: 24px;
+  padding-right: 11px;
+  padding-left: 15px;
+}
+
+.cvv {
+  border: 1px solid gray;
+  /* width: 600px; */
+  /* margin: 5%; */
+  padding: 2%;
+}.App {
+  text-align: center;
+  margin: 0%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.locationdiv {
+  display: grid;
+  place-items: center;
+  padding: 10%;
+  border: 2px solid gray;
+  width: 80%;
+  max-width: 500px;
+  margin: 1% auto;
+  background-color: #ddd;
+}
+
+input {
+  margin-bottom: 30px;
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+}
+
+.paymentdiv {
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 2%;
+  padding-bottom: 0%;
+  margin-top: 1px;
+}
+
+button {
+  width: 150px;
+  height: 40px;
+  background-color: rgb(129, 243, 125);
+  color: white;
+  border-radius: 20px;
+  box-shadow: #282c34;
+  cursor: pointer;
+}
+
+.paymentpg {
+  display: grid;
+  place-items: center;
+  margin: 1% auto;
+}
+
+@media (min-width: 577px) {}
+
+@media (min-width: 769px) {}
+
+@media (min-width: 993px) {}
+
+@media (min-width: 1201px) {}
+
+.item {
+  margin-right: 50px;
+}
+
+.payment-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.payment-options li {
+  margin-right: 20px;
+}
+
+.cards {
+  margin-top: 20px;
+}
+
+.card1, .card2, .card3 {
+  position: absolute;
+  width: 200px;
+  height: 110px;
+  box-shadow: 3px 5px 50px gray;
+  border-radius: 10px;
+}
+
+.card1 {
+  background: linear-gradient(90deg, rgba(255, 132, 9, 1) 42%, rgba(255, 0, 232, 1) 100%);
+  left: 60px;
+}
+
+.card2 {
+  background: linear-gradient(90deg, rgba(254, 255, 9, 1) 42%, rgba(255, 0, 232, 1) 100%);
+  left: 30px;
+  z-index: -1;
+}
+
+.card3 {
+  background: linear-gradient(90deg, rgba(9, 196, 255, 1) 42%, rgba(255, 0, 232, 1) 100%);
+  z-index: -2;
+}
+
+.card1.c1, .card2.c2, .card3.c3 {
+  position: sticky;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-bottom: 30px;
+}
+
+#cardtitle {
+  margin-left: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 0.5rem;
+}
+
+#chip, #chip2, #chip3 {
+  margin: 5px 20px;
+  width: 25px;
+}
+
+.card1 > div, .card2 > div, .card3 > div {
+  display: ruby-text;
+  text-align: justify;
+}
+
+.premium, .premium2, .premium3 {
+  font-size: 0.5rem;
+  margin-left: 60px;
+}
+
+#circle {
+  margin-left: 80px;
+}
+
+#cardsection {
+  transform: rotate(90deg);
+  margin: auto auto;
+  cursor: pointer;
+}
+
+.cvvcards > .an {
+  position: absolute;
+  overflow: hidden;
+  animation: anim 1s ease-in-out 1s forwards, shrink 1.3s ease-in-out 3s forwards, hide 2s ease-in-out 4s forwards;
+  z-index: 1;
+  left: -44px;
+}
+
+@keyframes anim {
   from {
-    transform: rotate(0deg);
+    top: 20px;
   }
   to {
-    transform: rotate(360deg);
+    top: 400px;
+    transform: rotate(90deg);
   }
 }
+
+@keyframes shrink {
+  from {
+    top: 400px;
+    transform: rotate(90deg) scale(1);
+  }
+  to {
+    top: 220px;
+    transform: rotate(90deg) scale(0.5, 0.5);
+  }
+}
+
+@keyframes hide {
+  from {
+    top: 220px;
+    transform: rotate(90deg) scale(0.5, 0.5);
+  }
+  to {
+    top: 172px;
+    transform: rotate(90deg) scale(0.02, 0.5);
+  }
+}
+
+.item > img {
+  height: 14px;
+  width: 24px;
+  padding-right: 11px;
+  padding-left: 15px;
+}
+
+.cvv {
+  border: 1px solid gray;
+  padding: 2%;
+}
+
+.cvvinput {
+  width: 80px;
+  height: 20px;
+  background-color: #ccc;
+  margin-left: 20px;
+  scrollbar-width: none;
+}
+
+.cvvno {
+  margin-left: 5px;
+}
+
+.cvvbtn {
+  background-color: blue;
+  color: white;
+  width: 80%;
+  border-radius: 15px;
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+
+#machine {
+  height: 400px;
+  background-color: black;
+  width: 45%;
+  margin-left: 80px;
+  margin-top: 10%;
+  padding: 5%;
+}
+
+.line {
+  margin-top: 20px;
+  height: 5px;
+  background: linear-gradient(90deg, rgba(255, 9, 9, 1) 4%, rgba(241, 66, 216, 1) 18%, rgba(227, 198, 123, 1) 32%, rgba(109, 214, 116, 1) 56%, rgba(202, 96, 96, 1) 77%, rgba(78, 122, 207, 1) 91%, rgba(210, 224, 67, 1) 100%, rgba(9, 196, 255, 1) 100%, rgba(255, 0, 232, 1) 100%, rgba(255, 0, 0, 1) 171%, rgba(175, 0, 255, 1) 190%);
+}
+
+.screen {
+  background-color: lawngreen;
+  height: 120px;
+  width: 100%;
+  border: 4px solid #ccc;
+  text-align: center;
+}
+
+.cardaccept {
+  border: 10px solid grey;
+  border-top: 5px solid greenyellow;
+  height: 5px;
+  width: 60px;
+  margin-top: 30px;
+}
+
+.dial {
+  color: aliceblue;
+  width: 100px;
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.holder {
+  display: inline-flex;
+}
+
+.billprint {
+  margin-left: 100px;
+  border: 3px solid gray;
+  border-radius: 15px;
+  width: 60px;
+  height: 5px;
+  margin-top: 30px;
+}
+
+
+
+.Ticket1st {
+  background-color: white;
+  width: 200px;
+  height: 60px;
+  border-radius: 15px;
+  text-align: center;
+
+  position: relative;
+  top: 20%;
+  background-color: gold;
+}
+
+.Ticket2nd {
+  z-index: inherit;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  position: relative;
+  top: 24%;
+
+  box-shadow: 20px 10px 200px black;
+}
+
+.item1 {
+  letter-spacing: 3px;
+  padding-top: 10px;
+  font-size: 1.3rem;
+}
+
+.passanger {
+  display: ruby-text;
+  color: grey;
+}
+
+.names {
+  display: ruby-text;
+  position: relative;
+  bottom: 30px;
+}
+
+.terminal {
+  display: ruby-text;
+  color: grey;
+  position: relative;
+  bottom: 50px;
+}
+
+.terminalbody {
+  display: ruby-text;
+  position: relative;
+  bottom: 80px;
+}
+
+.barcode {
+  width: 120px;
+  height: 50px;
+  position: relative;
+  bottom: 80px;
+  left: 40px;
+}
+
+
+.cvvinput {
+  width: 80px;
+  height: 20px;
+  background-color: #ccc;
+  margin-left: 20px;
+
+  scrollbar-width: none;
+}
+
+.cvvno {
+  margin-left: 5px;
+}
+
+.cvvbtn {
+  background-color: blue;
+  color: white;
+  width: 80%;
+  border-radius: 15px;
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+
+#machine {
+  height: 400px;
+  background-color: black;
+  width: 250px;
+  margin-left: 0;
+  margin-top: 20px;
+  padding: 20px;
+  /* transition: 3s ; */
+}
+
+.line {
+  margin-top: 20px;
+  height: 5px;
+
+  background: rgb(255, 9, 9);
+  background: linear-gradient(90deg, rgba(255, 9, 9, 1) 4%, rgba(241, 66, 216, 1) 18%, rgba(227, 198, 123, 1) 32%, rgba(109, 214, 116, 1) 56%, rgba(202, 96, 96, 1) 77%, rgba(78, 122, 207, 1) 91%, rgba(210, 224, 67, 1) 100%, rgba(9, 196, 255, 1) 100%, rgba(255, 0, 232, 1) 100%, rgba(255, 0, 0, 1) 171%, rgba(175, 0, 255, 1) 190%);
+}
+
+.screen {
+  background-color: lawngreen;
+  height: 120px;
+  width: 80%;
+  border: 4px solid #ccc;
+  text-align: center;
+  /* box-shadow: #ffffff  5px 5px 5px  1px ; */
+}
+
+.cardaccept {
+  border: 10px solid grey;
+  border-top: 5px solid greenyellow;
+  height: 5px;
+  width: 60px;
+  margin-top: 30px;
+}
+
+.dial {
+  color: aliceblue;
+  /* background-color: white; */
+  width: 100px;
+  margin-top: 30px;
+  margin-left: 60px;
+}
+.holder{
+  display: inline-flex;
+}
+
+.billprint {
+  /* position: relative; */
+  margin-left: 40px;
+  border: 3px solid gray;
+  border-radius: 15px;
+  width: 50px;
+  height: 5px;
+  margin-top: 30px;
+}
+
+.Ticket.book {
+  background: rgb(255, 0, 71);
+  background: linear-gradient(216deg, rgba(255, 0, 71, 1) 17%, rgba(111, 0, 255, 1) 171%, rgba(175, 0, 255, 1) 190%);
+  width: 100%;
+  height: 500px;
+  margin-top: 0%;
+
+}
+
+
+
+.item1 {
+  letter-spacing: 3px;
+  padding-top: 10px;
+  font-size: 1.3rem;
+}
+
+.passanger {
+  display: ruby-text;
+  color: grey;
+}
+
+.names {
+  display: ruby-text;
+
+  position: relative;
+  bottom: 30px;
+}
+
+.terminal {
+  display: ruby-text;
+  color: grey;
+  position: relative;
+  bottom: 50px;
+}
+
+.terminalbody {
+  display: ruby-text;
+
+  position: relative;
+  bottom: 80px;
+}
+
+.barcode {
+  width: 120px;
+  height: 50px;
+  position: relative;
+  bottom: 80px;
+  left: 40px;
+}
+
+.billdiv {
+position: absolute;
+  /* right: 112px; */
+  top: 103px;
+  left: 70px;
+  
+
+  animation: bill 3s ease-in-out 2s forwards;
+  animation-delay: 12s;
+  transform: scale(0.25, 0.03);
+
+}
+
+@keyframes bill {
+  from {
+    transform: scale(0.25, 0.03);
+  }
+  to {
+top:140px;
+    transform: scale(0.25, 0.3);
+  }
+}
+@keyframes zoom {
+  from{
+    top:140px;
+    transform: scale(0.25, 0.3);
+  }
+  to{
+    top:0;
+    left: 0;
+    background-color: white;
+    z-index: 11;
+    height: 100vh;
+    width: 100%;
+    left: 0%;
+padding-left: 50px;
+    transform: scale( 1);
+
+  }
+}
+.Ticketfull{
+  width: 100%;
+  background-color: black;
+  height: 100vh;
+  z-index: 10000000;
+  padding-left: 30px;
+}
+
+.doneicon{
+  position: absolute;
+  top: 20px;
+  margin-left: 50px;
+  padding: 2%;
+}
+
+
+
+/* .btn{
+  position: relative;
+  z-index: 99999;
+  background-color: paleturquoise;
+  /* width: 100px; */
+  /* color: #ddd; */
